@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2: Sharing Content</title>
+    <style>
+        /* Basic styling for the exercise */
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card.active {
+            border: 2px solid #007bff;
+            background-color: #e7f1ff;
+        }
+
+        .btn {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        .btn-load {
+            background-color: #28a745;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .btn-like {
+            background-color: #6c757d;
+            color: white;
+        }
+
+        .btn-like.liked {
+            background-color: #dc3545;
+        }
+
+        .btn-share {
+            background-color: #17a2b8;
+            color: white;
+        }
+
+        #instructions {
+            background: #fff3cd;
+            padding: 15px;
+            border: 1px solid #ffeeba;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Share Your Articles</h1>
+
+    <button id="load-btn" class="btn btn-load">Load New Content 📥</button>
+
+    <div id="content-area">
+        <!-- Dynamic cards will be injected here -->
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
