@@ -6,11 +6,28 @@
 **User Profile**: Create a program that defines three variables for a social media profile: a user's `username` (string), `age` (number), and `isOnline` (boolean). Then, output a welcome message using a **template literal** (e.g., "Welcome, Astrid! You are 28 years old and currently online.").
 ```javascript
 // Copy your code here
+var username = 'John'
+var age = 31
+var isOnline = true
+var onlineStatus
+
+if(isOnline) {
+    onlineStatus = 'online'
+}else {
+    onlineStatus = 'offline'
+}
+console.log(`Welcome, ${username}! Yor are ${age} years old and currently ${onlineStatus}.`)
 ```
 ### 2. Exercise 2
 **Shopping Receipt**: Create two variables `price` and `quantity` with values `150` and `3`. Calculate and log the `subtotal`. Then, calculate the **tax** (25% of subtotal) and the **final total**.
 ```javascript
 // Copy your code here
+var price = 150
+var quantity = 3
+var subtotal = price * quantity
+console.log('Subtotal: ' + subtotal)
+var finalTotal = subtotal + (25 * subtotal / 100)
+console.log('Final Total: ' + finalTotal)
 ```
 
 ### 3. Exercise 3
@@ -22,12 +39,24 @@
 Explain in a comment why we should prefer `===` for checking user IDs or passwords.
 ```javascript
 // Copy your code here
+console.log(10 == "10")
+console.log(10 === "10")
+console.log(undefined == null)
+console.log(undefined === null)
+// Always use strict equality check (===) when checking user ids and password.
+// It compares both value and type. This makes the comparison safer.
 ```
 
 ### 4. Exercise 4
 **Age Verification**: Write a script for a movie theater. Check if a variable `visitorAge` is between `12` and `18` (inclusive) to qualify for a "Teen Discount" using the `&&` operator. Log `true` or `false`.
 ```javascript
 // Copy your code here
+var visitorAge = 18
+if(visitorAge > 12 && visitorAge <= 18) {
+    console.log('Qualifying for a teens discount')
+}else {
+    console.log('Not qualify for a teen discount')
+}
 ```
 
 ### 5. Exercise 5
@@ -37,6 +66,14 @@ Explain in a comment why we should prefer `===` for checking user IDs or passwor
 - If it's below 18, log "Turning on the heater... 🔥"
 ```javascript
 // Copy your code here
+let roomTemperature = 9
+if(roomTemperature > 25) {
+    console.log('Turning on the AC... ❄️')
+} else if(roomTemperature > 18 && roomTemperature < 25) {
+    console.log('Temperature is perfect. ✅')
+} else if (roomTemperature < 18) {
+    console.log('Turning on the heater... 🔥')
+}
 ```
 
 ### 6. Exercise 6
