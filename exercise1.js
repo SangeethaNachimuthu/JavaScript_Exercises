@@ -2,13 +2,8 @@
 let username = 'John'
 let age = 31
 let isOnline = true
-let onlineStatus
+let onlineStatus = isOnline ? 'online' : 'offline'
 
-if(isOnline) {
-    onlineStatus = 'online'
-}else {
-    onlineStatus = 'offline'
-}
 console.log(`Welcome, ${username}! Yor are ${age} years old and currently ${onlineStatus}.`)
 
 
@@ -47,3 +42,52 @@ if(roomTemperature > 25) {
 } else if (roomTemperature < 18) {
     console.log('Turning on the heater... 🔥')
 }
+
+
+// Exercise 6 - Login Toggle
+let isLoggedIn = false
+let buttonText = isLoggedIn ? 'Logout' : 'Login'
+console.log('Button Text: ' + buttonText)
+
+
+// Exercise 7 - Traffic Light
+let lightColor = 'green'
+switch(lightColor) {
+    case 'red':
+        console.log('Stop!')
+        break
+    case 'yellow':
+        console.log('Slow down!')
+        break
+    case 'green':
+        console.log('Go!')
+        break
+    default:
+        console.log('Invalid color')
+}
+
+
+//Exercise 8 - Countdown Timer
+console.log('Rocket launch countdown starts')
+for(let count = 10; count>=1; count=count-1) {
+    console.log(count)
+}
+console.log('Lift off! 🚀')
+
+
+// Exercise 9 - Number List
+for(let i = 1; i<= 20; i++) {
+    if(i%2 === 0) {
+        console.log(i + ' is Even')
+    } else {
+        console.log(i + ' is Odd')
+    }
+}
+
+
+// Exercise 10 - Discount Function
+function applyDiscount(price, percentage) {
+    let discountedPrice = price - (price * percentage / 100)
+    console.log('Discounted Price is ' + discountedPrice)
+}
+applyDiscount(100, 20)

@@ -80,6 +80,9 @@ if(roomTemperature > 25) {
 **Login Toggle**: Use a **single line** ternary operator to set a variable `buttonText`. If the variable `isLoggedIn` is `true`, the button should say `"Logout"`, otherwise it should say `"Login"`.
 ```javascript
 // Copy your code here
+let isLoggedIn = false
+let buttonText = isLoggedIn ? 'Logout' : 'Login'
+console.log('Button Text: ' + buttonText)
 ```
 
 ### 7. Exercise 7
@@ -90,24 +93,55 @@ if(roomTemperature > 25) {
 - Default -> "Invalid color."
 ```javascript
 // Copy your code here
+let lightColor = 'green'
+switch(lightColor) {
+    case 'red':
+        console.log('Stop!')
+        break
+    case 'yellow':
+        console.log('Slow down!')
+        break
+    case 'green':
+        console.log('Go!')
+        break
+    default:
+        console.log('Invalid color')
+}
 ```
 
 ### 8. Exercise 8
 **Countdown Timer**: Write a `for` loop that simulates a rocket launch countdown from `10` down to `1`, and then logs "Lift off! 🚀".
 ```javascript
 // Copy your code here
+console.log('Rocket launch countdown starts')
+for(let count = 10; count>=1; count=count-1) {
+    console.log(count)
+}
+console.log('Lift off! 🚀')
 ```
 
 ### 9. Exercise 9
 **Number List**: Iterate through numbers `1` to `20`. For each number, log if it is `"Even"` (like a row in a table) or `"Odd"` using the remainder operator `%`.
 ```javascript
 // Copy your code here
+for(let i = 1; i<= 20; i++) {
+    if(i%2 === 0) {
+        console.log(i + ' is Even')
+    } else {
+        console.log(i + ' is Odd')
+    }
+}
 ```
 
 ### 10. Exercise 10
 **Discount Function**: Create a function called `applyDiscount` that takes `price` and `percentage`. It should return the discounted price. (e.g., `applyDiscount(100, 20)` should return `80`).
 ```javascript
 // Copy your code here
+function applyDiscount(price, percentage) {
+    let discountedPrice = price - (price * percentage / 100)
+    console.log('Discounted Price is ' + discountedPrice)
+}
+applyDiscount(100, 20)
 ```
 
 ### 11. Exercise 11
