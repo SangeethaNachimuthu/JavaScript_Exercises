@@ -153,30 +153,50 @@ function formatWelcome(name) {
 ```
 ```javascript
 // Copy your code here
+const formatWelcome = (name) => {
+    return "Hello, " + name + "! Welcome back."
+}
+console.log(formatWelcome('John'))
 ```
 
 ### 12. Exercise 12
 **Email Default**: Create a function `sendEmail` that takes a `recipient` and a `subject`. If `subject` is not provided, it should default to `"No Subject"`.
 ```javascript
 // Copy your code here
+const sendEmail = (recipient, subject='No Subject') => {
+    return "Hai, " + recipient + " chooses " + subject
+}
+console.log(sendEmail('Rose', ))
+console.log(sendEmail('Lily', 'Java'))
 ```
 
 ### 13. Exercise 13
 **Price Increase**: You have an array: `const oldPrices = [50, 100, 250]`. Use `.map()` to create a new array where every price is increased by 10% due to inflation.
 ```javascript
 // Copy your code here
+const oldPrices = [50, 100, 250]
+const newPrices = oldPrices.map(oldPrices => oldPrices + (oldPrices * 10 / 100))
+console.log('New Prices: ' + newPrices)
 ```
 
 ### 14. Exercise 14
 **Inventory Check**: You have an array of stock levels: `const inventory = [0, 12, 5, 0, 8, 3]`. Use `.filter()` to create a new array containing only the items that are **in stock** (greater than 0).
 ```javascript
 // Copy your code here
+const inventory = [0, 12, 5, 0, 8, 3]
+const inStock = inventory.filter((inventory => inventory > 0))
+console.log('In Stock: ' + inStock)
 ```
 
 ### 15. Exercise 15
 **Cart Total**: You have an array of item prices in a cart: `const cart = [19.99, 5.50, 24.00]`. Use `.reduce()` to calculate the **Total Amount** the customer needs to pay.
 ```javascript
 // Copy your code here
+const cart = [19.99, 5.50, 24.00]
+const totalAmount = cart.reduce((total, price) => {
+    return total + price;
+}, 0)
+console.log(totalAmount.toFixed(2))
 ```
 
 ### 16. Exercise 16

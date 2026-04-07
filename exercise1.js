@@ -91,3 +91,38 @@ function applyDiscount(price, percentage) {
     console.log('Discounted Price is ' + discountedPrice)
 }
 applyDiscount(100, 20)
+
+
+// Exercise 11 - Greeting Arrow
+const formatWelcome = (name) => {
+    return "Hello, " + name + "! Welcome back."
+}
+console.log(formatWelcome('John'))
+
+
+// Exercise 12 - Email Default
+const sendEmail = (recipient, subject='No Subject') => {
+    return "Hai, " + recipient + " chooses " + subject
+}
+console.log(sendEmail('Rose', ))
+console.log(sendEmail('Lily', 'Java'))
+
+
+// Exercise 13 - Price Increase
+const oldPrices = [50, 100, 250]
+const newPrices = oldPrices.map(oldPrices => oldPrices + (oldPrices * 10 / 100))
+console.log('New Prices: ' + newPrices)
+
+
+// Exercise 14 - Inventory Check
+const inventory = [0, 12, 5, 0, 8, 3]
+const inStock = inventory.filter((inventory => inventory > 0))
+console.log('In Stock: ' + inStock)
+
+
+// Exercise 15 - Cart Total
+const cart = [19.99, 5.50, 24.00]
+const totalAmount = cart.reduce((total, price) => {
+                                return total + price;
+                            }, 0)
+console.log(totalAmount.toFixed(2))
