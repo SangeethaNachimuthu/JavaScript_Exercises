@@ -125,4 +125,50 @@ const cart = [19.99, 5.50, 24.00]
 const totalAmount = cart.reduce((total, price) => {
                                 return total + price;
                             }, 0)
-console.log(totalAmount.toFixed(2))
+console.log(totalAmount.toFixed(2)) //'toFixed' is used to specify the decimal points
+
+
+//Exercise 16 - *User Object
+const userAccount = {
+    username: 'Johan',
+    email: 'johan@gmail.com',
+    followerCount: 12,
+    isVerified: true
+}
+console.log('User Name: ' + userAccount.username)
+console.log('User Email: ' + userAccount.email)
+
+
+// Exercise 17 - Profile Update
+userAccount.bio = 'ab' //Add a property
+userAccount.followerCount = 16  //Update a property
+delete userAccount.email    //Delete a property
+console.log(userAccount)
+
+
+// Exercise 18 - Local Storage Simulation
+const jsonString = JSON.stringify(userAccount)
+console.log(jsonString)
+const backToObj = JSON.parse(jsonString)
+console.log(backToObj)
+
+
+// Exercise 19 - Safe API Parsing
+function fetchConfig(jsonString) {
+    try {
+        return JSON.parse(jsonString)
+    }
+    catch (error) {
+        console.log("Configuration error: Please check your data.")
+        return null
+    }
+}
+const invalid = '{"name": "App", version: 1}';
+fetchConfig(invalid)
+
+
+// Exercise 20 - Auto-Date
+let now = new Date()
+console.log('Current Year: ' + now.getFullYear())
+console.log('Current Month: ' + (now.getMonth()+1))
+console.log("Today's Date: " + (now.toLocaleDateString('en-GB')))

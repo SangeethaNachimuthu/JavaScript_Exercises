@@ -203,28 +203,59 @@ console.log(totalAmount.toFixed(2))
 **User Object**: Create an object representing a `userAccount` with properties: `username`, `email`, `followerCount`, and `isVerified` (boolean). Log the username and email using dot notation.
 ```javascript
 // Copy your code here
+const userAccount = {
+    username: 'Johan',
+    email: 'johan@gmail.com',
+    followerCount: 12,
+    isVerified: true
+}
+console.log('User Name: ' + userAccount.username)
+console.log('User Email: ' + userAccount.email)
 ```
 
 ### 17. Exercise 17
 **Profile Update**: Take the `userAccount` from Exercise 16. Add a `bio`, update the `followerCount`, and delete the `email` property (for privacy). Log the final object.
 ```javascript
 // Copy your code here
+userAccount.bio = 'ab' //Add a property
+userAccount.followerCount = 16  //Update a property
+delete userAccount.email    //Delete a property
+console.log(userAccount)
 ```
 
 ### 18. Exercise 18
 **Local Storage Simulation**: Convert your `userAccount` object into a **JSON string** (like you would do to save it to LocalStorage). Then, parse it back into an object.
 ```javascript
 // Copy your code here
+const jsonString = JSON.stringify(userAccount)
+console.log(jsonString)
+const backToObj = JSON.parse(jsonString)
+console.log(backToObj)
 ```
 
 ### 19. Exercise 19
 **Safe API Parsing**: Write a function `fetchConfig` that takes a JSON string. Use `try...catch` to parse it. If the string is broken (invalid JSON), log a friendly error message: "Configuration error: Please check your data."
 ```javascript
 // Copy your code here
+function fetchConfig(jsonString) {
+    try {
+        return JSON.parse(jsonString)
+    }
+    catch (error) {
+        console.log("Configuration error: Please check your data.")
+        return null
+    }
+}
+const invalid = '{"name": "App", version: 1}';
+fetchConfig(invalid)
 ```
 
 ### 20. Exercise 20
 **Auto-Date**: Create a `Date` object. Log the current **Year** and **Month**, then format the date into a readable string like `"03/03/2026"` using `.toLocaleDateString()`.
 ```javascript
 // Copy your code here
+let now = new Date()
+console.log('Current Year: ' + now.getFullYear())
+console.log('Current Month: ' + (now.getMonth()+1))
+console.log("Today's Date: " + (now.toLocaleDateString('en-GB')))
 ```
