@@ -1,6 +1,6 @@
 # JavaScript Exercises
 
----
+
 ### Exercise 1 
 It contains 20 fundamental exercises of JavaScript.
 
